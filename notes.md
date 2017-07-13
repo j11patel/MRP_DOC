@@ -12,4 +12,11 @@ For example, i have prepared a new variable STK11_PRKAA2 (with 3 as high where (
 
 STk11_PRKAA2 => Survival rate based on STK11 and PRKAA mRNA expression, MTOR_PRKAA2 => Survival rate based on MTOR and PRKAA mRNA expression, MTOR_STK11 => Survival rate based on MTOR and PRKAA mRNA expression are available in MRP_DOC/PLOTS
 
+Summary result for median survival time for each group is available in summary_median_survival at MRP_DOC/PLOTS
+
+
+
+
 I also tried convolution function to prepare one variable for mRNA expression of STK11 and PRKAA2 but resulting variable wasnt satisfying.
+
+
