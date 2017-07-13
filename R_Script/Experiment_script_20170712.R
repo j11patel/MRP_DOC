@@ -20,7 +20,7 @@ pos <- 0
 mygroup <- NULL
 for(i in length(clinical$STK11)){
   qq <- clinical$STK11[(pos+1):(pos+i)]
-  myq <- quantile(qq, probs=c(0.30, 0.60), na.rm=TRUE)
+  myq <- quantile(qq, probs=c(0.33, 0.66), na.rm=TRUE)
   qq[clinical$STK11[(pos+1):(pos+i)] < myq[1]] <- 1
   qq[clinical$STK11[(pos+1):(pos+i)] >= myq[1] & clinical$STK11[(pos+1):(pos+i)] < myq[2]] <- 2
   qq[clinical$STK11[(pos+1):(pos+i)] > myq[2]] <- 3
@@ -34,7 +34,7 @@ pos <- 0
 mygroup_RB1 <- NULL
 for(i in length(clinical$RB1)){
   qq <- clinical$RB1[(pos+1):(pos+i)]
-  myq <- quantile(qq, probs=c(0.30, 0.60), na.rm=TRUE)
+  myq <- quantile(qq, probs=c(0.33, 0.66), na.rm=TRUE)
   qq[clinical$RB1[(pos+1):(pos+i)] < myq[1]] <- 1
   qq[clinical$RB1[(pos+1):(pos+i)] >= myq[1] & clinical$RB1[(pos+1):(pos+i)] < myq[2]] <- 2
   qq[clinical$RB1[(pos+1):(pos+i)] > myq[2]] <- 3
@@ -48,7 +48,7 @@ pos <- 0
 mygroup_PRKAA2 <- NULL
 for(i in length(clinical$PRKAA2)){
   qq <- clinical$PRKAA2[(pos+1):(pos+i)]
-  myq <- quantile(qq, probs=c(0.30, 0.60), na.rm=TRUE)
+  myq <- quantile(qq, probs=c(0.33, 0.66), na.rm=TRUE)
   qq[clinical$PRKAA2[(pos+1):(pos+i)] < myq[1]] <- 1
   qq[clinical$PRKAA2[(pos+1):(pos+i)] >= myq[1] & clinical$PRKAA2[(pos+1):(pos+i)] < myq[2]] <- 2
   qq[clinical$PRKAA2[(pos+1):(pos+i)] > myq[2]] <- 3
@@ -69,7 +69,7 @@ pos <- 0
 mygroup_MTOR <- NULL
 for(i in length(clinical$MTOR)){
   qq <- clinical$MTOR[(pos+1):(pos+i)]
-  myq <- quantile(qq, probs=c(0.30, 0.60), na.rm=TRUE)
+  myq <- quantile(qq, probs=c(0.33, 0.66), na.rm=TRUE)
   qq[clinical$MTOR[(pos+1):(pos+i)] < myq[1]] <- 1
   qq[clinical$MTOR[(pos+1):(pos+i)] >= myq[1] & clinical$MTOR[(pos+1):(pos+i)] < myq[2]] <- 2
   qq[clinical$MTOR[(pos+1):(pos+i)] > myq[2]] <- 3
@@ -131,6 +131,7 @@ ggsurvplot ( sfit,
              ggtheme = theme_bw(),            # Change ggplot2 theme
              legend.labs = c("LOW  ", "INTERMEDIATE   ", "HIGH   "),     # change legend labels.
              palette = c("#E7B800", "#2E9FDF","#0000FF"))
+summary(sfit)
 
 #### GRAPH with more details
 ggsurvplot(
