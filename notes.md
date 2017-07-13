@@ -11,3 +11,5 @@ I have created new category variable to check effect of HIGH expression of two g
 For example, i have prepared a new variable STK11_PRKAA2 (with 3 as high where (STK11 = 3 and PRKAA2 = 3, STK11 = 3 and PRKAA = 2, STK11 =2 and PRKAA = 3)  and prepared survival plot check high mRNA expression of STk11 and PRKAA2 on survival rate.
 
 STk11_PRKAA2 => Survival rate based on STK11 and PRKAA mRNA expression, MTOR_PRKAA2 => Survival rate based on MTOR and PRKAA mRNA expression, MTOR_STK11 => Survival rate based on MTOR and PRKAA mRNA expression are available in MRP_DOC/PLOTS
+
+I also tried convolution function to prepare one variable for mRNA expression of STK11 and PRKAA2 but resulting variable wasnt satisfying.
