@@ -1,6 +1,7 @@
 
 
 ################ To Figureout correlation between mRNA expression of genes and survival rate ###############
+
 I have categorized mRNA expression of STK11, RB1, PRKAA2 and MTOR into three categories (1)Low, (2)Intermediate and (3)High using quantile function to check effect of High mRNA expression of respective gene to Survival Rate.
 
 Survival Plots for STK11, PRKAA2 and RB1 are available in MRP_DOC/PLOTS
